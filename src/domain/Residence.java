@@ -31,4 +31,14 @@ public abstract class Residence {
     public int getSaloonNumber() {
         return saloonNumber;
     }
+
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName() + "{" +
+                "price=" + price +
+                ", squareMeter=" + squareMeter +
+                ", roomNumber=" + roomNumber +
+                ", saloonNumber=" + saloonNumber +
+                '}';
+    }
 }
