@@ -2,21 +2,21 @@ package domain;
 
 public abstract class Residence {
 
-    private double price;
+    private int price;
     private int squareMeter;
 
     private int roomNumber;
 
     private int saloonNumber;
 
-    public Residence(double price, int squareMeter, int roomNumber, int saloonNumber) {
+    public Residence(int price, int squareMeter, int roomNumber, int saloonNumber) {
         this.price = price;
         this.squareMeter = squareMeter;
         this.roomNumber = roomNumber;
         this.saloonNumber = saloonNumber;
     }
 
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 
