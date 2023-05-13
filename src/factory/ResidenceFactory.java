@@ -53,10 +53,10 @@ public class ResidenceFactory {
 
   private static ResidenceDTO generateAttributesOfResidence() {
     Random randomGenerator=new Random();
-    double price=randomGenerator.nextDouble(10.0) + 1.0;
-    int squareMeter=randomGenerator.nextInt(100) + 30;
-    int roomNumber=randomGenerator.nextInt(5) + 1;
-    int saloonNumber=randomGenerator.nextInt(3) + 1;
+    int price=randomGenerator.nextInt(150) + 100;
+    int squareMeter=randomGenerator.nextInt(50) + 50;
+    int roomNumber=randomGenerator.nextInt(2) + 1;
+    int saloonNumber=randomGenerator.nextInt(1) + 1;
     return new ResidenceDTO(price,squareMeter,roomNumber,saloonNumber);
 
   }
