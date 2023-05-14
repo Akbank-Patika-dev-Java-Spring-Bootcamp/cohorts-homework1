@@ -15,9 +15,9 @@ public class Main {
 
     public static void main(String[] args) {
         List<Residence> allResidences= new ArrayList<>();
-        List<Home> homes= ResidenceFactory.getHomesList(3);
-        List<Villa> villas=ResidenceFactory.getVillasList(3);
-        List<SummerHouse> summerHouses = ResidenceFactory.getSummerHouses(3);
+        List<Home> homes= ResidenceFactory.createHomesList(3);
+        List<Villa> villas=ResidenceFactory.createVillasList(3);
+        List<SummerHouse> summerHouses = ResidenceFactory.createSummerHousesList(3);
         allResidences.addAll(homes);
         allResidences.addAll(villas);
         allResidences.addAll(summerHouses);

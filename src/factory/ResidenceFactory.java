@@ -1,7 +1,6 @@
 package factory;
 
 import domain.Home;
-import domain.Residence;
 import domain.SummerHouse;
 import domain.Villa;
 
@@ -12,7 +11,7 @@ import java.util.Random;
 
 public class ResidenceFactory {
 
-  public static List<Home> getHomesList(int numberOfInstance) {
+  public static List<Home> createHomesList(int numberOfInstance) {
     int startIndex = 0;
     List<Home> homes=new ArrayList<>();
     while (numberOfInstance > startIndex) {
@@ -25,7 +24,7 @@ public class ResidenceFactory {
 
   }
 
-  public static List<Villa> getVillasList(int numberOfInstance){
+  public static List<Villa> createVillasList(int numberOfInstance){
     int startIndex = 0;
     List<Villa> villas=new ArrayList<>();
     while (numberOfInstance > startIndex) {
@@ -38,7 +37,7 @@ public class ResidenceFactory {
     
   }
 
-  public static List<SummerHouse> getSummerHouses(int numberOfInstance) {
+  public static List<SummerHouse> createSummerHousesList(int numberOfInstance) {
     int startIndex = 0;
     List<SummerHouse> summerHouses=new ArrayList<>();
     while (numberOfInstance > startIndex) {
