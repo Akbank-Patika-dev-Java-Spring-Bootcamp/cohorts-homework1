@@ -24,19 +24,19 @@ public class ResidenceService {
         return ResidenceService.getTotalPrice((List<Residence>) upcastingSummerHouses);
     }
 
-    public static int getTotalSquareMeterOfVillas(List<Villa> villas) {
+    public static double getAverageSquareMeterOfVillas(List<Villa> villas) {
         List<? extends Residence> upcastingVillas=villas;
-        return ResidenceService.getTotalSquareMeter((List<Residence>) upcastingVillas);
+        return ResidenceService.getTotalSquareMeter((List<Residence>) upcastingVillas) / villas.size();
     }
 
-    public static int getTotalSquareMeterOfHomes(List<Home> homes) {
+    public static double getAverageSquareMeterOfHomes(List<Home> homes) {
         List<? extends Residence> upCastingHomes=homes;
-        return ResidenceService.getTotalSquareMeter((List<Residence>) upCastingHomes);
+        return ResidenceService.getTotalSquareMeter((List<Residence>) upCastingHomes) / homes.size();
     }
 
-    public static int getTotalSquareMeterOfSummerHouses(List<SummerHouse> summerHouses) {
+    public static double getAverageSquareMeterOfSummerHouses(List<SummerHouse> summerHouses) {
         List<? extends Residence> upcastingSummerHouses=summerHouses;
-        return ResidenceService.getTotalSquareMeter((List<Residence>) upcastingSummerHouses);
+        return ResidenceService.getTotalSquareMeter((List<Residence>) upcastingSummerHouses) / summerHouses.size();
     }
 
 
@@ -60,8 +60,8 @@ public class ResidenceService {
     public static List<Residence> getResidences(List<Residence> residences,int roomNumber,int saloonNumber) {
        return  residences.stream().
                 filter(residence ->
-                        (residence.getRoomNumber() == roomNumber
-                                && residence.getSaloonNumber() == saloonNumber)).toList();
+                        (residence.getNumberOfRooms() == roomNumber
+                                && residence.getNumberOfHalls() == saloonNumber)).toList();
 
     }
 

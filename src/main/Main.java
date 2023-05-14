@@ -24,9 +24,9 @@ public class Main {
         int homesPrice = ResidenceService.getTotalPriceOfHomes(homes);
         int summerHousesPrice = ResidenceService.getTotalPricesOfSummerHouses(summerHouses);
         int villasPrice = ResidenceService.getTotalPricesOfVillas(villas);
-        int homesSquareMeter = ResidenceService.getTotalSquareMeterOfHomes(homes);
-        int summerHousesSquareMeter = ResidenceService.getTotalSquareMeterOfSummerHouses(summerHouses);
-        int villasSquareMeter = ResidenceService.getTotalSquareMeterOfVillas(villas);
+        double homesAverageSquareMeter = ResidenceService.getAverageSquareMeterOfHomes(homes);
+        double summerHousesAverageSquareMeter = ResidenceService.getAverageSquareMeterOfSummerHouses(summerHouses);
+        double villasAverageSquareMeter = ResidenceService.getAverageSquareMeterOfVillas(villas);
         System.out.println("Homes --> " + homes);
         System.out.println("villas --> " + villas);
         System.out.println("summerHouses -->" + summerHouses);
@@ -34,10 +34,10 @@ public class Main {
         System.out.println("Total prices of summerhouses = " + summerHousesPrice);
         System.out.println("Total prices of villas = " + villasPrice);
         System.out.println("Total prices of all residences = " + (homesPrice + summerHousesPrice + villasPrice));
-        System.out.println("Total square meter of homes = " + homesSquareMeter);
-        System.out.println("Total square meter of summerhouses = " + summerHousesSquareMeter);
-        System.out.println("Total square meter of villas = " + villasSquareMeter);
-        System.out.println("Total square meter of all residences = " + (homesSquareMeter + summerHousesSquareMeter + villasSquareMeter));
+        System.out.println("Average square meter of homes = " + homesAverageSquareMeter);
+        System.out.println("Average square meter of summerhouses = " + summerHousesAverageSquareMeter);
+        System.out.println("Average square meter of villas = " + villasAverageSquareMeter);
+        System.out.println("Average square meter of all residences = " + (ResidenceService.getTotalSquareMeter(allResidences) / allResidences.size()));
         System.out.println("Get residences based on  room and saloon number = " + ResidenceService.getResidences(allResidences,2,1));
 
     }

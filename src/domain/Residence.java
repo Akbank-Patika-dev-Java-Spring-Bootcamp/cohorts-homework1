@@ -5,15 +5,15 @@ public abstract class Residence {
     private int price;
     private int squareMeter;
 
-    private int roomNumber;
+    private int numberOfRooms;
 
-    private int saloonNumber;
+    private int numberOfHalls;
 
-    public Residence(int price, int squareMeter, int roomNumber, int saloonNumber) {
+    public Residence(int price, int squareMeter, int numberOfRooms, int numberOfHalls) {
         this.price = price;
         this.squareMeter = squareMeter;
-        this.roomNumber = roomNumber;
-        this.saloonNumber = saloonNumber;
+        this.numberOfRooms = numberOfRooms;
+        this.numberOfHalls = numberOfHalls;
     }
 
     public int getPrice() {
@@ -24,12 +24,12 @@ public abstract class Residence {
         return squareMeter;
     }
 
-    public int getRoomNumber() {
-        return roomNumber;
+    public int getNumberOfRooms() {
+        return numberOfRooms;
     }
 
-    public int getSaloonNumber() {
-        return saloonNumber;
+    public int getNumberOfHalls() {
+        return numberOfHalls;
     }
 
     @Override
@@ -37,8 +37,8 @@ public abstract class Residence {
         return this.getClass().getSimpleName() + "{" +
                 "price=" + price +
                 ", squareMeter=" + squareMeter +
-                ", roomNumber=" + roomNumber +
-                ", saloonNumber=" + saloonNumber +
+                ", roomNumber=" + numberOfRooms +
+                ", saloonNumber=" + numberOfHalls +
                 '}';
     }
 }
